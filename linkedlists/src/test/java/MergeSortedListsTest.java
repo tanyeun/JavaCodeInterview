@@ -34,6 +34,7 @@ public class MergeSortedListsTest {
 
     private void test(ListNode<Integer> expected, ListNode<Integer> list1, ListNode<Integer> list2) {
         ListNode<Integer> result = MergeSortedLists.mergeLists(list1, list2);
+        //LinkedListUtil.print(result);
         LinkedListUtil.assertSameList(expected, result);
     }
 

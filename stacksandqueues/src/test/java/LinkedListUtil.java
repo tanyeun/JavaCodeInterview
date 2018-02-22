@@ -1,5 +1,3 @@
-import java.util.List;
-
 import static org.junit.Assert.fail;
 
 public class LinkedListUtil {
@@ -30,8 +28,7 @@ public class LinkedListUtil {
         ListNode<Integer> dummyHead = new ListNode<>(null);
         ListNode<Integer> list = dummyHead;
         for (Integer i : integers) {
-            ListNode<Integer> tmp = new ListNode<>(i);
-            list.next = tmp;
+            list.next = new ListNode<>(i);
             list = list.next;
         }
         return dummyHead.next;

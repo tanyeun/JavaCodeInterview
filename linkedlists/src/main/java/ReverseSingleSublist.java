@@ -20,5 +20,6 @@ public class ReverseSingleSublist {
         }
 
         return dummyNode.next;
+        //return input;
     }
 }

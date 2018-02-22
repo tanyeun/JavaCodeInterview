@@ -1,4 +1,5 @@
 import org.junit.Test;
+import sun.awt.image.ImageWatched;
 
 public class ReverseSingleSublistTest {
 
@@ -10,7 +11,9 @@ public class ReverseSingleSublistTest {
     @Test
     public void reverseSublist1() {
         expected = LinkedListUtil.createLinkedList(1, 2, 3);
+        System.out.println(expected.toString());
         list = LinkedListUtil.createLinkedList(3, 2, 1);
+        System.out.println(list.toString());
         s = 1;
         f = 3;
 
@@ -28,7 +31,9 @@ public class ReverseSingleSublistTest {
     }
 
     private void test(ListNode<Integer> expected, ListNode<Integer> list, int s, int f) {
-        LinkedListUtil.assertSameList(expected, ReverseSingleSublist.reverseSublist(list, s, f));
+        ListNode<Integer> result = ReverseSingleSublist.reverseSublist(list, s, f);
+        LinkedListUtil.print(result);
+        LinkedListUtil.assertSameList(expected, result);
     }
 
 }

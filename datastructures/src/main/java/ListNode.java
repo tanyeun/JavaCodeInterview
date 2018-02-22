@@ -13,6 +13,7 @@ public class ListNode<T> {
 
     public ListNode(T data) {
         this.data = data;
+        this.next = null;
     }
 
     public ListNode<T> get(int n) {
@@ -44,11 +45,12 @@ public class ListNode<T> {
 
     @Override
     public String toString() {
+        ListNode<T> current = this.next;
         StringBuilder list = new StringBuilder();
         list.append(this.data.toString()+" -> ");
-        while (this.next != null) {
-            list.append(this.next.data.toString()+" -> ");
-            this.next = this.next.next;
+        while (current != null) {
+            list.append(current.data.toString()+" -> ");
+            current = current.next;
         }
         list.append("null");
         return list.toString();
