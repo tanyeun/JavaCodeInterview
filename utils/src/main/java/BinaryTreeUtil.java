@@ -82,6 +82,27 @@ public class BinaryTreeUtil {
         return tree;
     }
 
+    /*
+       Size: 6
+       Height: 3
+                     10
+                    /  \
+                   5    6
+                       / \
+                      8   7
+                           \
+                            4
+     */
+    public static BinaryTree<Integer> getTestTree1(){
+        BinaryTree<Integer> root = new BinaryTree<>(10);
+        root.left = new BinaryTree<>(5);
+        root.right = new BinaryTree<>(6);
+        root.right.left = new BinaryTree<>(8);
+        root.right.right = new BinaryTree<>(7);
+        root.right.right.right = new BinaryTree<>(4);
+        return root;
+    }
+
     public static BinaryTreeParent<Integer> getFigureTenDotOneWithParent() {
         BinaryTreeParent<Integer> tree = new BinaryTreeParent<>(314);
         tree.setLeft(new BinaryTreeParent<>(6));

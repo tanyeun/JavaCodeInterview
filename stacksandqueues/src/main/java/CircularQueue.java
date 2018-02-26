@@ -1,7 +1,7 @@
 public class CircularQueue {
 
     /*
-    9.8
+    8.8 Implement a circular queue
     */
 
     private int head = 9, tail = 10, numQueueElements = 0;

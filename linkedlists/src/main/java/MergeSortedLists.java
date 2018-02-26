@@ -1,13 +1,13 @@
 public class MergeSortedLists {
 
     /*
-    8.1
+       7.1 Merge two sorted lists
     */
-
     public static ListNode<Integer> mergeLists(ListNode<Integer> list1, ListNode<Integer> list2) {
         ListNode<Integer> dummyHead = new ListNode<>(0, null);
         ListNode<Integer> merged = dummyHead;
         ListNode<Integer> l1 = list1, l2 = list2;
+
         while (l1 != null && l2 != null) {
             if (l1.data < l2.data) {
                 merged.next = l1;
@@ -18,11 +18,9 @@ public class MergeSortedLists {
             }
             merged = merged.next;
         }
-        if (l1 != null) {
-            merged.next = l1;
-        } else if (l2 != null) {
-            merged.next = l2;
-        }
+
+        // Connect the remaining l1 or l2
+        merged.next = l1 != null ? l1 : l2;
         return dummyHead.next;
     }
 }

@@ -4,7 +4,7 @@ import java.util.LinkedList;
 public class IsSymmetric {
 
     /*
-    10.2
+    10.2 Method 1
     */
 
     public static boolean isSymmetric(BinaryTree<Integer> tree) {

@@ -40,8 +40,18 @@ public class ComputeParityTest {
         test(expected, n);
     }
 
+    @Test
+    public void parity5() {
+        expected = 1;
+        n = 11; // 1011
+
+        test(expected, n);
+    }
+
     private void test(short expected, long n) {
-        assertEquals(expected, ComputeParity.parity(n));
+        //assertEquals(expected, ComputeParity.parity(n));
+        //assertEquals(expected, ComputeParity.parity_v2(n));
+        assertEquals(expected, ComputeParity.parity_v3(n));
     }
 
 

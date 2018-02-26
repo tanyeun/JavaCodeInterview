@@ -17,7 +17,7 @@ public class Main {
         alist.set(1, '-');
         System.out.println(alist.toString());
         System.out.println(alist.contains('C'));
-
+        System.out.println(alist.subList(0,3).toString()); // index 0 to 2
         // Iterator that can only read
         Iterator itr = alist.iterator();
         while(itr.hasNext()){
@@ -58,26 +58,6 @@ public class Main {
 
         //ListNode<Integer> test = LinkedListUtil.createLinkedList(11,3,5,7,2);
         ListNode<Integer> test = LinkedListUtil.createLinkedList(3,2,1);
-        LinkedListUtil.print(test);
-        ListNode<Integer> dummy = new ListNode<>(0, test);
-        ListNode<Integer> head = dummy;
-        //head = head.next;
-
-        ListNode<Integer> current = head.next;
-
-        ListNode<Integer> tmp = current.next;
-        current.next = tmp.next;
-        tmp.next = head.next;
-        head.next = tmp;
-
-        LinkedListUtil.print(dummy.next);
-
-        tmp = current.next;
-        current.next = tmp.next;
-        tmp.next = head.next;
-        head.next = tmp;
-
-        LinkedListUtil.print(dummy.next);
         LinkedListUtil.print(test);
     }
 }

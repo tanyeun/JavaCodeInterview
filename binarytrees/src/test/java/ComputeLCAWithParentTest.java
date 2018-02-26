@@ -41,7 +41,8 @@ public class ComputeLCAWithParentTest {
     }
 
     private void test(BinaryTreeParent<Integer> expected, BinaryTreeParent<Integer> node0, BinaryTreeParent<Integer> node1) {
-        assertEquals(expected, ComputeLCAWithParent.LCA(node0, node1));
+        //assertEquals(expected, ComputeLCAWithParent.LCA(node0, node1));
+        assertEquals(expected, ComputeLCAWithParent.LCA_v2(node0, node1));
     }
 
 }

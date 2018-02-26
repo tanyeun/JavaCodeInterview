@@ -1,14 +1,28 @@
 import junit.framework.AssertionFailedError;
 import org.junit.Assert;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import static org.junit.Assert.*;
 
 public class AssertUtils {
+
+    public static boolean sameIntArray(int[] expected, int[] actual){
+        if( expected.length != actual.length ){
+            System.out.println("Expected length: "+expected.length);
+            System.out.println("Actual length: "+actual.length);
+            return false;
+        }
+        for( int i = 0; i < expected.length; i++ ){
+            if( expected[i] != actual[i] ){
+                System.out.println("Expected: "+ Arrays.toString(expected));
+                System.out.println("Actual: "+ Arrays.toString(actual));
+                System.out.println("Different at: "+i);
+                return false;
+            }
+        }
+        return true;
+    }
 
     public static void assertSameList(ListNode<Integer> expected, ListNode<Integer> result) {
         ListNode<Integer> given = expected;

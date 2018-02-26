@@ -11,10 +11,20 @@ public class ReverseSingleSublistTest {
     @Test
     public void reverseSublist1() {
         expected = LinkedListUtil.createLinkedList(1, 2, 3);
-        System.out.println(expected.toString());
         list = LinkedListUtil.createLinkedList(3, 2, 1);
-        System.out.println(list.toString());
         s = 1;
+        f = 3;
+
+        test(expected, list, s, f);
+    }
+
+    @Test
+    public void reverseSublist1_1() {
+        // Example that you can't return trail.next
+        //         the necessary existence of dummyHead
+        expected = LinkedListUtil.createLinkedList(3, 1, 2);
+        list = LinkedListUtil.createLinkedList(3, 2, 1);
+        s = 2;
         f = 3;
 
         test(expected, list, s, f);

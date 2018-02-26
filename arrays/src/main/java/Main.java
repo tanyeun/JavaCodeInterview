@@ -13,6 +13,7 @@ public class Main {
                           {7,8,9}};
 
         // If found, return index, otherwise -(length+1)
+        // ONLY WORKS for SORTED array
         System.out.println(ary1d.length);
         System.out.println(Arrays.binarySearch(ary1d, 5));
         System.out.println(Arrays.binarySearch(ary1d, 12));
@@ -23,6 +24,7 @@ public class Main {
         Integer[] aryRand2 = {15, 2, 3, 7, 9, 57};
         int[] ary1dCp = Arrays.copyOf(ary1d, 3); // copy ary1d of length 3
         int[] ary1dCp2 = Arrays.copyOfRange(ary1d, 2, 5); // from index 2 to 4
+        int[] ary1dCp3 = Arrays.copyOf(ary1d, ary1d.length*2);
         // y. System.arraycopy(來源陣列，起始索引值，目的陣列，起始索引值，複製長度);
         System.out.println(Arrays.toString(ary1dCp));
         System.out.println(Arrays.toString(ary1dCp2));

@@ -40,6 +40,8 @@ public class ComputeLowestCommonAncestorTest {
     }
 
     private void test(BinaryTree<Integer> expected, BinaryTree<Integer> tree, BinaryTree<Integer> node0, BinaryTree<Integer> node1) {
-        assertEquals(expected, ComputeLowestCommonAncestor.LCA(tree,node0,node1));
+        //assertEquals(expected, ComputeLowestCommonAncestor.LCA(tree,node0,node1));
+        //assertEquals(expected, ComputeLowestCommonAncestor.LCA_v2(tree,node0,node1));
+        assertEquals(expected, ComputeLowestCommonAncestor.LCA_v3(tree,node0,node1));
     }
 }
