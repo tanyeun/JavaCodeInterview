@@ -38,6 +38,8 @@ public class Main {
             System.out.print(element+" ");
         }
         System.out.println();
+        alist.add(0, 'Z');    // Add to the beginning of the list
+        System.out.println(alist);
 
         alist.remove(1);
         System.out.println(alist.toString());

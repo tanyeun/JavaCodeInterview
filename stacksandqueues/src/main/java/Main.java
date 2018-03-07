@@ -1,5 +1,4 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,5 +16,18 @@ public class Main {
         st.pop();                      // remove and return the first/top element
 
         System.out.println(st.peek());
+
+        Stack<String> st1 = new Stack<>();
+        st1.push("hello");
+        st1.push("world");
+        st1.push("foo");
+        st1.push("bar");
+        System.out.println(st1.peek());
+        System.out.println(st1);
+        System.out.println(st1.pop());
+        System.out.println(st1);
+
+        Queue<Integer> que = new LinkedList<>();  // LinkedList implements Queue, actually
+                                                  // also can implements Stack
     }
 }
